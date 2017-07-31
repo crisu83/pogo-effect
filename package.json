@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "flow-bin": "0.47",
+    "flow-typed": "^2.1.5",
     "jest-expo": "~19.0.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
@@ -11,16 +13,18 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "flow": "flow",
+    "flow:fetch-types": "flow-typed install --flowVersion=0.47"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "lodash": "^4.13.1",
+    "lodash": "^4.17.4",
     "normalizr": "^2.2.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.46.4",
+    "react-native": "^0.46.1",
     "react-native-deprecated-custom-components": "^0.1.1",
     "react-native-vector-icons": "^2.0.3",
     "react-redux": "^4.4.5",
