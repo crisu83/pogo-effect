@@ -2,13 +2,15 @@
 
 import pokemon from '../data/pokemon.json'
 import {
+  EnabledGenerations,
   PokemonTypes,
   EffectivenessMultipliers,
   EffectivenessTable,
 } from './constants'
 import type {Pokemon, ListOfPokemon} from './pokemon/types'
 
-export const getAllPokemon = () => pokemon
+export const getAllPokemon = () =>
+  pokemon.filter(pokemon => EnabledGenerations.indexOf(pokemon.gen) !== -1)
 
 export const getWeakAgainstPokemon = (
   pokemon: ListOfPokemon,

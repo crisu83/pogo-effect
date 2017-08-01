@@ -1,5 +1,7 @@
 // @flow
 
+export const EnabledGenerations = [1, 2]
+
 export const TypeNames = {
   NORMAL: 'normal',
   FIRE: 'fire',
