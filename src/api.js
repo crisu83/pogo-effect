@@ -1,45 +1,65 @@
-import pokemon from './data/pokemon.json';
+// @flow
 
-import { PokemonTypes, EffectivenessMultipliers, EffectivenessTable } from './constants';
+import pokemon from '../data/pokemon.json'
+import {
+  PokemonTypes,
+  EffectivenessMultipliers,
+  EffectivenessTable,
+} from './constants'
+import type {Pokemon, ListOfPokemon} from './pokemon/types'
 
-export const getAllPokemon = () => pokemon;
+export const getAllPokemon = () => pokemon
 
-export const getWeakAgainstPokemon = (pokemon, defender) => {
-  const result = [];
-  
+export const getWeakAgainstPokemon = (
+  pokemon: ListOfPokemon,
+  defender: Pokemon,
+): ListOfPokemon => {
+  const result = []
+
   for (let i = 0, score; i < pokemon.length; i++) {
-    score = comparePokemon(pokemon[i], defender);
+    score = comparePokemon(pokemon[i], defender)
     if (score > 1) {
-      result.push({ ...pokemon[i], score });
+      result.push({...pokemon[i], score})
     }
   }
 
-  return result;
-};
+  return result
+}
 
-export const getStrongAgainstPokemon = (pokemon, attacker) => {
-  const result = [];
+export const getStrongAgainstPokemon = (
+  pokemon: ListOfPokemon,
+  attacker: Pokemon,
+): ListOfPokemon => {
+  const result = []
 
   for (let i = 0, score; i < pokemon.length; i++) {
-    score = comparePokemon(attacker, pokemon[i]);
+    score = comparePokemon(attacker, pokemon[i])
     if (score > 1) {
-      result.push({ ...pokemon[i], score });
+      result.push({...pokemon[i], score})
     }
   }
 
-  return result;
-};
+  return result
+}
 
-export const comparePokemon = (attacker, defender) => {
-  let score = 1;
-  
+export const comparePokemon = (
+  attacker: Pokemon,
+  defender: Pokemon,
+): number => {
+  let score = 1
+
   for (let i = 0, attackerTypeIndex; i < attacker.types.length; i++) {
-    attackerTypeIndex = PokemonTypes.indexOf(attacker.types[i]);
-    for (let j = 0, defenderTypeIndex; j < defender.types.length; j++) {
-      defenderTypeIndex = PokemonTypes.indexOf(defender.types[j]);
-      score *= EffectivenessMultipliers[EffectivenessTable[attackerTypeIndex][defenderTypeIndex]];
+    attackerTypeIndex = PokemonTypes.indexOf(attacker.types[i])
+    for (
+      let j = 0, defenderTypeIndex, effectiveness;
+      j < defender.types.length;
+      j++
+    ) {
+      defenderTypeIndex = PokemonTypes.indexOf(defender.types[j])
+      effectiveness = EffectivenessTable[attackerTypeIndex][defenderTypeIndex]
+      score *= EffectivenessMultipliers[effectiveness]
     }
   }
-  
-  return score;
-};
+
+  return score
+}

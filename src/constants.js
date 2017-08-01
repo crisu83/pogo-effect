@@ -1,5 +1,4 @@
-import { PropTypes } from 'react';
-import { Schema, arrayOf } from 'normalizr';
+// @flow
 
 export const TypeNames = {
   NORMAL: 'normal',
@@ -19,50 +18,8 @@ export const TypeNames = {
   DRAGON: 'dragon',
   DARK: 'dark',
   STEEL: 'steel',
-  FAIRY: 'fairy'
-};
-
-export const PokemonTypes = [
-  TypeNames.NORMAL,
-  TypeNames.FIGHTING,
-  TypeNames.FLYING,
-  TypeNames.POISON,
-  TypeNames.GROUND,
-  TypeNames.ROCK,
-  TypeNames.BUG,
-  TypeNames.GHOST,
-  TypeNames.STEEL,
-  TypeNames.FIRE,
-  TypeNames.WATER,
-  TypeNames.GRASS,
-  TypeNames.ELECTRIC,
-  TypeNames.PSYCHIC,
-  TypeNames.ICE,
-  TypeNames.DRAGON,
-  TypeNames.DARK,
-  TypeNames.FAIRY
-];
-
-// export const PokemonTypes = [
-//   TypeNames.NORMAL,
-//   TypeNames.FIRE,
-//   TypeNames.WATER,
-//   TypeNames.ELECTRIC,
-//   TypeNames.GRASS,
-//   TypeNames.ICE,
-//   TypeNames.FIGHTING,
-//   TypeNames.POISON,
-//   TypeNames.GROUND,
-//   TypeNames.FLYING,
-//   TypeNames.PSYCHIC,
-//   TypeNames.BUG,
-//   TypeNames.ROCK,
-//   TypeNames.GHOST,
-//   TypeNames.DRAGON,
-//   // TypeNames.DARK,
-//   TypeNames.STEEL,
-//   TypeNames.FAIRY
-// ];
+  FAIRY: 'fairy',
+}
 
 export const TypeColors = {
   [TypeNames.NORMAL]: '#ccd6c5',
@@ -82,91 +39,64 @@ export const TypeColors = {
   [TypeNames.DRAGON]: '#4a42ba',
   [TypeNames.DARK]: '#464649',
   [TypeNames.STEEL]: '#b3c2ce',
-  [TypeNames.FAIRY]: '#ffa1d0'
-};
+  [TypeNames.FAIRY]: '#ffa1d0',
+}
+
+export const PokemonTypes = [
+  TypeNames.BUG,
+  TypeNames.DARK,
+  TypeNames.DRAGON,
+  TypeNames.ELECTRIC,
+  TypeNames.FAIRY,
+  TypeNames.FIGHTING,
+  TypeNames.FIRE,
+  TypeNames.FLYING,
+  TypeNames.GHOST,
+  TypeNames.GRASS,
+  TypeNames.GROUND,
+  TypeNames.ICE,
+  TypeNames.NORMAL,
+  TypeNames.POISON,
+  TypeNames.PSYCHIC,
+  TypeNames.ROCK,
+  TypeNames.STEEL,
+  TypeNames.WATER,
+]
 
 const EffectivenessTypes = {
-  NOT_VERY_EFFECTIVE: 0,
-  NORMAL: 1,
-  SUPER_EFFECTIVE: 2
-};
+  RESISTANT: 0,
+  NOT_VERY_EFFECTIVE: 1,
+  NORMAL: 2,
+  SUPER_EFFECTIVE: 3,
+}
 
-export const EffectivenessTable = [
-  [1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1], // normal
-  [2, 1, 0, 0, 1, 2, 0, 0, 2, 1, 1, 1, 1, 0, 2, 1, 2, 0], // fighting
-  [1, 2, 1, 1, 1, 0, 2, 1, 0, 1, 1, 2, 0, 1, 1, 1, 1, 1], // flying
-  [1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 2, 1, 1, 1, 1, 1, 2], // poison
-  [1, 1, 0, 2, 1, 2, 0, 1, 2, 2, 1, 0, 2, 1, 1, 1, 1, 1], // ground
-  [1, 0, 2, 1, 0, 1, 2, 1, 0, 2, 1, 1, 1, 1, 2, 1, 1, 1], // rock
-  [1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 2, 1, 1, 2, 0], // bug
-  [0, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 1], // ghost
-  [1, 1, 1, 1, 1, 2, 1, 1, 0, 0, 0, 1, 0, 1, 2, 1, 1, 2], // steel
-  [1, 1, 1, 1, 1, 0, 2, 1, 2, 0, 0, 2, 1, 1, 2, 0, 1, 1], // fire
-  [1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 0, 0, 1, 1, 1, 0, 1, 1], // water
-  [1, 1, 0, 0, 2, 2, 0, 1, 0, 0, 2, 0, 1, 1, 1, 0, 1, 1], // grass
-  [1, 1, 2, 1, 0, 1, 1, 1, 1, 1, 2, 0, 0, 1, 1, 0, 1, 1], // electric
-  [1, 2, 1, 2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1], // psychic
-  [1, 1, 2, 1, 2, 1, 1, 1, 0, 0, 0, 2, 1, 1, 0, 2, 1, 1], // ice
-  [1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 1, 0], // dragon
-  [1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0], // dark
-  [1, 2, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 2, 2, 1]  // fairy
-];
-
-// source: https://img.pokemondb.net/images/typechart.png
-// export const EffectivenessTable = [
-//   [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 2, 1, 2],
-//   [2, 1, 1, 2, 3, 3, 2, 2, 2, 2, 2, 3, 1, 2, 1, 3, 2],
-//   [2, 3, 1, 2, 1, 2, 2, 2, 3, 2, 2, 2, 3, 2, 1, 2, 2],
-//   [2, 2, 3, 1, 1, 2, 2, 2, 0, 3, 2, 2, 2, 2, 1, 2, 2],
-//   [2, 1, 3, 2, 1, 2, 2, 1, 3, 1, 2, 1, 3, 2, 1, 1, 2],
-//   [2, 1, 1, 2, 3, 1, 2, 2, 3, 3, 2, 2, 2, 2, 3, 1, 2],
-//   [3, 2, 2, 2, 2, 3, 2, 1, 2, 1, 1, 1, 3, 0, 2, 3, 1],
-//   [2, 2, 2, 2, 3, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 0, 3],
-//   [2, 3, 2, 3, 1, 2, 2, 3, 2, 0, 2, 1, 3, 2, 2, 3, 2],
-//   [2, 2, 2, 1, 3, 2, 3, 2, 2, 2, 2, 3, 1, 2, 2, 1, 2],
-//   [2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 1, 2, 2, 2, 2, 1, 2],
-//   [2, 1, 2, 2, 3, 2, 1, 1, 2, 1, 3, 2, 2, 1, 2, 1, 1],
-//   [2, 3, 2, 2, 2, 3, 1, 2, 1, 3, 2, 3, 2, 2, 2, 1, 2],
-//   [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 2, 2],
-//   [2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 3, 2, 2, 3, 2, 2, 1],
-//   [2, 1, 1, 1, 2, 3, 2, 2, 2, 2, 2, 2, 3, 2, 2, 1, 3],
-//   [2, 1, 2, 2, 2, 2, 3, 1, 2, 2, 2, 2, 2, 2, 3, 1, 2]
-// ];
-
-// With Dark
-// export const EffectivenessTable = [
-//   [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 2, 2, 1, 2],
-//   [2, 1, 1, 2, 3, 3, 2, 2, 2, 2, 2, 3, 1, 2, 1, 2, 3, 2],
-//   [2, 3, 1, 2, 1, 2, 2, 2, 3, 2, 2, 2, 3, 2, 1, 2, 2, 2],
-//   [2, 2, 3, 1, 1, 2, 2, 2, 0, 3, 2, 2, 2, 2, 1, 2, 2, 2],
-//   [2, 1, 3, 2, 1, 2, 2, 1, 3, 1, 2, 1, 3, 2, 1, 2, 1, 2],
-//   [2, 1, 1, 2, 3, 1, 2, 2, 3, 3, 2, 2, 2, 2, 3, 2, 1, 2],
-//   [3, 2, 2, 2, 2, 3, 2, 1, 2, 1, 1, 1, 3, 0, 2, 3, 3, 1],
-//   [2, 2, 2, 2, 3, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 0, 3],
-//   [2, 3, 2, 3, 1, 2, 2, 3, 2, 0, 2, 1, 3, 2, 2, 2, 3, 2],
-//   [2, 2, 2, 1, 3, 2, 3, 2, 2, 2, 2, 3, 1, 2, 2, 2, 1, 2],
-//   [2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 1, 2, 2, 2, 2, 0, 1, 2],
-//   [2, 1, 2, 2, 3, 2, 1, 1, 2, 1, 3, 2, 2, 1, 2, 3, 1, 1],
-//   [2, 3, 2, 2, 2, 3, 1, 2, 1, 3, 2, 3, 2, 2, 2, 2, 1, 2],
-//   [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2, 1, 2, 2],
-//   [2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 3, 2, 2, 3, 2, 1, 2, 1],
-//   [2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 3, 2, 2, 3, 2, 1, 2, 1],
-//   [2, 1, 1, 1, 2, 3, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 1, 3],
-//   [2, 1, 2, 2, 2, 2, 3, 1, 2, 2, 2, 2, 2, 2, 3, 3, 1, 2]
-// ];
-
+// source: https://www.reddit.com/r/TheSilphRoad/comments/6iedgc/new_type_effectiveness_chart/
 export const EffectivenessMultipliers = {
-  // [EffectivenessTypes.NO_EFFECT]: 0,
-  [EffectivenessTypes.NOT_VERY_EFFECTIVE]: 0.8,
+  [EffectivenessTypes.RESISTANT]: 0.51,
+  [EffectivenessTypes.NOT_VERY_EFFECTIVE]: 0.714,
   [EffectivenessTypes.NORMAL]: 1,
-  [EffectivenessTypes.SUPER_EFFECTIVE]: 1.25
-};
+  [EffectivenessTypes.SUPER_EFFECTIVE]: 1.4,
+}
 
-export const pokemonShape = {
-  dex: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  types: PropTypes.arrayOf(PropTypes.oneOf(PokemonTypes))
-};
-
-export const pokemonSchema = new Schema('pokemon', { idAttribute: 'dex' });
-export const arrayOfPokemonSchema = arrayOf(pokemonSchema);
+// source: http://i.imgur.com/sxs90Lx.png
+// The defender is on the x-axis and the attacker is on the y-axis.
+export const EffectivenessTable = [
+  [2, 3, 2, 2, 1, 1, 1, 1, 1, 3, 2, 2, 2, 1, 3, 2, 1, 2], // bug
+  [2, 1, 2, 2, 1, 1, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2], // dark
+  [2, 2, 3, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2], // dragon
+  [2, 2, 1, 1, 2, 2, 2, 3, 2, 1, 0, 2, 2, 2, 2, 2, 2, 3], // electric
+  [2, 3, 3, 2, 2, 3, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2], // fairy
+  [1, 3, 2, 2, 1, 2, 2, 1, 0, 2, 2, 3, 3, 1, 1, 3, 3, 2], // fighting
+  [3, 2, 1, 2, 2, 2, 1, 2, 2, 3, 2, 3, 2, 2, 2, 1, 3, 1], // fire
+  [3, 2, 2, 1, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2, 2, 1, 1, 2], // flying
+  [2, 1, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 0, 2, 3, 2, 2, 2], // ghost
+  [1, 2, 1, 2, 2, 2, 1, 1, 2, 1, 3, 2, 2, 1, 2, 3, 1, 3], // grass
+  [1, 2, 2, 3, 2, 2, 3, 0, 2, 1, 2, 2, 2, 3, 2, 3, 3, 2], // ground
+  [2, 2, 3, 2, 2, 2, 1, 3, 2, 3, 3, 1, 2, 2, 2, 2, 1, 1], // ice
+  [2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 1, 1, 2], // normal
+  [2, 2, 2, 2, 3, 2, 2, 2, 1, 3, 1, 2, 2, 1, 2, 1, 0, 2], // poison
+  [2, 0, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 3, 1, 2, 1, 2], // psychic
+  [3, 2, 2, 2, 2, 1, 3, 3, 2, 2, 1, 3, 2, 2, 2, 2, 1, 2], // rock
+  [2, 2, 2, 1, 3, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 3, 1, 1], // steel
+  [2, 2, 1, 2, 2, 2, 3, 2, 2, 1, 3, 2, 2, 2, 2, 3, 2, 1], // water
+]

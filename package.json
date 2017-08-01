@@ -18,14 +18,10 @@
     "normalizr": "^2.2.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.46.1",
-    "react-native-deprecated-custom-components": "^0.1.1",
     "react-native-vector-icons": "^2.0.3",
+    "react-navigation": "^1.0.0-beta.11",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2",
-    "redux-actions": "^0.10.1",
-    "redux-logger": "^2.6.1",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.1.0"
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
