@@ -1,33 +1,44 @@
 // @flow
 
 import isEqual from 'lodash/isEqual'
-import React, {Component, PropTypes} from 'react'
+import React, {PureComponent} from 'react'
 import {ListView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 import {TypeColors} from '../constants'
 import {alphaSort, normalizeSize} from '../helpers'
-import type {ListOfPokemon} from './types'
+import type {Pokemon} from './types'
 
 type Props = {
-  data: ListOfPokemon,
+  data: {
+    item: Pokemon,
+  },
   onPress: Function,
 }
 
-const PokemonListItem = ({data, onPress}: Props) =>
-  <TouchableOpacity onPress={() => onPress(data.dex)}>
-    <View style={styles.item}>
-      <Text style={styles.name}>
-        {data.name}
-      </Text>
-      <View style={styles.types}>
-        {data.types.map((type, index) =>
-          <View
-            key={index}
-            style={[styles.type, {backgroundColor: TypeColors[type]}]}
-          />,
-        )}
-      </View>
-    </View>
-  </TouchableOpacity>
+class PokemonListItem extends PureComponent {
+  props: Props
+
+  render() {
+    const {data: {item}, onPress} = this.props
+
+    return (
+      <TouchableOpacity onPress={() => onPress(item.dex)}>
+        <View style={styles.item}>
+          <Text style={styles.name}>
+            {item.name}
+          </Text>
+          <View style={styles.types}>
+            {item.types.map((type, index) =>
+              <View
+                key={index}
+                style={[styles.type, {backgroundColor: TypeColors[type]}]}
+              />,
+            )}
+          </View>
+        </View>
+      </TouchableOpacity>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   item: {

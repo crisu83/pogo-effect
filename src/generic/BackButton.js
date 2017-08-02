@@ -1,6 +1,6 @@
 // @flow
 
-import React, {PropTypes} from 'react'
+import React from 'react'
 import {StyleSheet, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/Octicons'
 import {normalizeSize} from '../helpers'

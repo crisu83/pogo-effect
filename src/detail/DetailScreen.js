@@ -53,6 +53,8 @@ class DetailScreen extends Component {
     const {navigation, data, weakAgainst, strongAgainst} = this.props
     const {activeTabIndex} = this.state
 
+    console.log(strongAgainst)
+
     return (
       <View style={styles.container}>
         <ScrollView>

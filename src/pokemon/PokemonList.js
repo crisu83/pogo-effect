@@ -1,8 +1,7 @@
 // @flow
 
-import isEqual from 'lodash/isEqual'
-import React, {Component, PropTypes} from 'react'
-import {ListView} from 'react-native'
+import React, {Component} from 'react'
+import {FlatList} from 'react-native'
 import {TypeColors} from '../constants'
 import {alphaSort, normalizeSize} from '../helpers'
 import PokemonListItem from './PokemonListItem'
@@ -15,50 +14,45 @@ type Props = {
 }
 
 type State = {
-  dataSource: *,
+  sortedData: ListOfPokemon,
 }
 
 class PokemonList extends Component {
-  factory: * = new ListView.DataSource({
-    rowHasChanged: (a, b) => a.dex !== b.dex,
-  })
+  props: Props
 
   state: State = {
-    dataSource: this.factory.cloneWithRows([]),
+    sortedData: [],
   }
 
   static defaultProps = {
     sortData: alphaSort('name'),
   }
 
-  componentDidMount() {
-    this.setDataSource(this.props.data)
+  componentWillMount() {
+    this.setData(this.props.data)
   }
 
   componentWillReceiveProps(nextProps: Props) {
-    if (!isEqual(nextProps.data, this.props.data)) {
-      this.setDataSource(nextProps.data)
-    }
+    this.setData(nextProps.data)
   }
 
-  setDataSource = (data: ListOfPokemon) => {
+  setData = (data: ListOfPokemon) => {
     const clone = [...data]
     clone.sort(this.props.sortData)
-    this.setState({dataSource: this.factory.cloneWithRows(clone)})
+    this.setState({sortedData: clone})
   }
 
   render() {
-    const {onItemPress, style} = this.props
-    const {dataSource} = this.state
+    const {onItemPress, ...rest} = this.props
+    const {sortedData} = this.state
 
     return (
-      <ListView
-        style={style}
-        dataSource={dataSource}
-        renderRow={rowData =>
-          <PokemonListItem data={rowData} onPress={onItemPress} />}
-        enableEmptySections
-        removeClippedSubviews={false}
+      <FlatList
+        {...rest}
+        data={sortedData}
+        keyExtractor={item => item.dex}
+        renderItem={item =>
+          <PokemonListItem data={item} onPress={onItemPress} />}
       />
     )
   }
