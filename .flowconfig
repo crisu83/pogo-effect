@@ -30,8 +30,10 @@
 ; Ignore react-native-fbads dependency of the expo sdk
 .*/node_modules/react-native-fbads/*
 
-; Ignore bug https://github.com/facebook/react-native/issues/14927
+; Ignore files and libs with Flow issues
 .*/node_modules/react-native/local-cli/link/link.js
+.*/node_modules/react-native-tab-view/src/TabBar.js
+.*/node_modules/react-navigation/*
 
 [include]
 
@@ -51,8 +53,10 @@ munge_underscores=true
 
 module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
 
-; Map bug https://github.com/facebook/react-native/issues/14927
+; Map ignored libraries to empty objects
 module.name_mapper='^./link/link$' -> 'emptyObject'
+module.name_mapper='^./TabBar$' -> 'emptyObject'
+module.name_mapper='^react-navigation$' -> 'emptyObject'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
