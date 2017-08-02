@@ -3,7 +3,7 @@
 import {combineReducers, type Reducer} from 'redux'
 import type {MapOfPokemon} from './types'
 
-const byIdReducer: Reducer<MapOfPokemon, *> = (state = {}, action) => {
+const byDexReducer: Reducer<MapOfPokemon, *> = (state = {}, action) => {
   switch (action.type) {
     case 'POKEMON_GET_ALL':
       return action.payload.entities.pokemon
@@ -24,7 +24,7 @@ const listReducer: Reducer<Array<string>, *> = (state = [], action) => {
 }
 
 const pokemonReducer = combineReducers({
-  byId: byIdReducer,
+  byDex: byDexReducer,
   list: listReducer,
 })
 

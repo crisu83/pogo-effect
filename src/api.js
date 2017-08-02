@@ -12,7 +12,7 @@ import type {Pokemon, ListOfPokemon} from './pokemon/types'
 export const getAllPokemon = () =>
   pokemon.filter(pokemon => EnabledGenerations.indexOf(pokemon.gen) !== -1)
 
-export const getWeakAgainstPokemon = (
+export const filterWeakAgainstPokemon = (
   pokemon: ListOfPokemon,
   defender: Pokemon,
 ): ListOfPokemon => {
@@ -28,7 +28,7 @@ export const getWeakAgainstPokemon = (
   return result
 }
 
-export const getStrongAgainstPokemon = (
+export const filterStrongAgainstPokemon = (
   pokemon: ListOfPokemon,
   attacker: Pokemon,
 ): ListOfPokemon => {

@@ -1,5 +1,10 @@
 // @flow
 
-export const getIsSearchActive = (state: Object) => state.isActive
+import {type Selector} from 'reselect'
+import type {RootState} from '../root/types'
 
-export const getSearchQuery = (state: Object) => state.query
+export const getIsSearchActive: Selector<RootState, void, boolean> = state =>
+  state.search.isActive
+
+export const getSearchQuery: Selector<RootState, void, string> = state =>
+  state.search.query

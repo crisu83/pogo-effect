@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 })
 
 const mapStateToProps = state => ({
-  isSearchActive: getIsSearchActive(state.search),
+  isSearchActive: getIsSearchActive(state),
 })
 
 export default connect(mapStateToProps, {activateSearch})(Search)

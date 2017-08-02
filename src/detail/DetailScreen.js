@@ -53,8 +53,6 @@ class DetailScreen extends Component {
     const {navigation, data, weakAgainst, strongAgainst} = this.props
     const {activeTabIndex} = this.state
 
-    console.log(strongAgainst)
-
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -103,16 +101,14 @@ class DetailScreen extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  data: getOnePokemon(state.pokemon, ownProps.navigation.state.params.dex),
-  weakAgainst: getWeakAgainstPokemon(
-    state.pokemon,
-    ownProps.navigation.state.params.dex,
-  ),
-  strongAgainst: getStrongAgainstPokemon(
-    state.pokemon,
-    ownProps.navigation.state.params.dex,
-  ),
+const mapStateToProps = (state, props) => ({
+  data: getOnePokemon(state, {dex: props.navigation.state.params.dex}),
+  weakAgainst: getWeakAgainstPokemon(state, {
+    dex: props.navigation.state.params.dex,
+  }),
+  strongAgainst: getStrongAgainstPokemon(state, {
+    dex: props.navigation.state.params.dex,
+  }),
 })
 
 const styles = StyleSheet.create({

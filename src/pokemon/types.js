@@ -35,3 +35,8 @@ export type Pokemon = {
 export type MapOfPokemon = {[key: string]: Pokemon}
 
 export type ListOfPokemon = Array<Pokemon>
+
+export type PokemonState = {
+  byDex: MapOfPokemon,
+  list: Array<string>,
+}

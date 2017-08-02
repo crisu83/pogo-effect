@@ -1,21 +1,44 @@
 // @flow
 
-import * as api from '../api'
+import {filterWeakAgainstPokemon, filterStrongAgainstPokemon} from '../api'
+import {createSelector, type Selector} from 'reselect'
+import {getSearchQuery} from '../search/selectors'
+import type {Pokemon, ListOfPokemon} from './types'
+import type {RootState} from '../root/types'
 
-export const getOnePokemon = (state, id) => state.byId[id]
+export const getOnePokemon: Selector<RootState, {dex: string}, Pokemon> = (
+  state,
+  props,
+) => state.pokemon.byDex[props.dex]
 
-export const getAllPokemon = state =>
-  state.list.map(id => getOnePokemon(state, id))
+export const getAllPokemon: Selector<RootState, void, ListOfPokemon> = state =>
+  state.pokemon.list.map(dex => getOnePokemon(state, {dex}))
 
-export const getPokemonBySearchQuery = (state, searchQuery) => {
-  const expression = new RegExp(`^.*${searchQuery}`, 'i')
-  return getAllPokemon(state).filter(
-    pokemon => pokemon.name.match(expression) !== null,
-  )
-}
+export const getPokemonBySearchQuery: Selector<
+  RootState,
+  void,
+  ListOfPokemon,
+> = createSelector(
+  [getAllPokemon, getSearchQuery],
+  (allPokemon, searchQuery) => {
+    if (searchQuery.length === 0) {
+      return allPokemon
+    }
+    const expression = new RegExp(`^.*${searchQuery}`, 'i')
+    return allPokemon.filter(pokemon => pokemon.name.match(expression) !== null)
+  },
+)
 
-export const getWeakAgainstPokemon = (state, id) =>
-  api.getWeakAgainstPokemon(getAllPokemon(state), getOnePokemon(state, id))
+export const getWeakAgainstPokemon: Selector<
+  RootState,
+  {dex: string},
+  ListOfPokemon,
+> = (state, props) =>
+  filterWeakAgainstPokemon(getAllPokemon(state), getOnePokemon(state, props))
 
-export const getStrongAgainstPokemon = (state, id) =>
-  api.getStrongAgainstPokemon(getAllPokemon(state), getOnePokemon(state, id))
+export const getStrongAgainstPokemon: Selector<
+  RootState,
+  {dex: string},
+  ListOfPokemon,
+> = (state, props) =>
+  filterStrongAgainstPokemon(getAllPokemon(state), getOnePokemon(state, props))

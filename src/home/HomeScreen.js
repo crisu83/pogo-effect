@@ -49,7 +49,7 @@ class HomeScreen extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: getPokemonBySearchQuery(state.pokemon, state.search.query),
+  data: getPokemonBySearchQuery(state),
 })
 
 const styles = StyleSheet.create({
