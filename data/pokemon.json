@@ -15,6 +15,7 @@
     "dex": "#003",
     "name": "Venusaur",
     "types": ["grass", "poison"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -33,6 +34,7 @@
     "dex": "#006",
     "name": "Charizard",
     "types": ["fire", "flying"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -51,6 +53,7 @@
     "dex": "#009",
     "name": "Blastoise",
     "types": ["water"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -69,6 +72,7 @@
     "dex": "#012",
     "name": "Butterfree",
     "types": ["bug", "flying"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -87,6 +91,7 @@
     "dex": "#015",
     "name": "Beedrill",
     "types": ["bug", "poison"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -105,6 +110,7 @@
     "dex": "#018",
     "name": "Pidgeot",
     "types": ["normal", "flying"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -117,6 +123,7 @@
     "dex": "#020",
     "name": "Raticate",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -129,6 +136,7 @@
     "dex": "#022",
     "name": "Fearow",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -141,6 +149,7 @@
     "dex": "#024",
     "name": "Arbok",
     "types": ["poison"],
+    "finalStage": true,
     "gen": 1
   },
   {
@@ -153,6 +162,7 @@
     "dex": "#026",
     "name": "Raichu",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -165,6 +175,7 @@
     "dex": "#028",
     "name": "Sandslash",
     "types": ["ground"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -183,6 +194,7 @@
     "dex": "#031",
     "name": "Nidoqueen",
     "types": ["poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -201,6 +213,7 @@
     "dex": "#034",
     "name": "Nidoking",
     "types": ["poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -213,6 +226,7 @@
     "dex": "#036",
     "name": "Clefable",
     "types": ["fairy"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -225,6 +239,7 @@
     "dex": "#038",
     "name": "Ninetales",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -237,6 +252,7 @@
     "dex": "#040",
     "name": "Wigglytuff",
     "types": ["normal", "fairy"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -267,6 +283,7 @@
     "dex": "#045",
     "name": "Vileplume",
     "types": ["grass", "poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -279,6 +296,7 @@
     "dex": "#047",
     "name": "Parasect",
     "types": ["bug", "grass"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -291,6 +309,7 @@
     "dex": "#049",
     "name": "Venomoth",
     "types": ["bug", "poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -303,6 +322,7 @@
     "dex": "#051",
     "name": "Dugtrio",
     "types": ["ground"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -315,6 +335,7 @@
     "dex": "#053",
     "name": "Persian",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -327,6 +348,7 @@
     "dex": "#055",
     "name": "Golduck",
     "types": ["water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -339,6 +361,7 @@
     "dex": "#057",
     "name": "Primeape",
     "types": ["fighting"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -351,6 +374,7 @@
     "dex": "#059",
     "name": "Arcanine",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -369,6 +393,7 @@
     "dex": "#062",
     "name": "Poliwrath",
     "types": ["water", "fighting"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -387,6 +412,7 @@
     "dex": "#065",
     "name": "Alakazam",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -405,6 +431,7 @@
     "dex": "#068",
     "name": "Machamp",
     "types": ["fighting"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -423,6 +450,7 @@
     "dex": "#071",
     "name": "Victreebel",
     "types": ["grass", "poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -435,6 +463,7 @@
     "dex": "#073",
     "name": "Tentacruel",
     "types": ["water", "poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -453,6 +482,7 @@
     "dex": "#076",
     "name": "Golem",
     "types": ["rock", "ground"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -465,6 +495,7 @@
     "dex": "#078",
     "name": "Rapidash",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -477,6 +508,7 @@
     "dex": "#080",
     "name": "Slowbro",
     "types": ["water", "psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -489,12 +521,14 @@
     "dex": "#082",
     "name": "Magneton",
     "types": ["electric", "steel"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#083",
     "name": "Farfetch'd",
     "types": ["normal", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -507,6 +541,7 @@
     "dex": "#085",
     "name": "Dodrio",
     "types": ["normal", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -519,6 +554,7 @@
     "dex": "#087",
     "name": "Dewgong",
     "types": ["water", "ice"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -531,6 +567,7 @@
     "dex": "#089",
     "name": "Muk",
     "types": ["poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -543,6 +580,7 @@
     "dex": "#091",
     "name": "Cloyster",
     "types": ["water", "ice"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -561,6 +599,7 @@
     "dex": "#094",
     "name": "Gengar",
     "types": ["ghost", "poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -579,6 +618,7 @@
     "dex": "#097",
     "name": "Hypno",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -591,6 +631,7 @@
     "dex": "#099",
     "name": "Kingler",
     "types": ["water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -603,6 +644,7 @@
     "dex": "#101",
     "name": "Electrode",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -615,6 +657,7 @@
     "dex": "#103",
     "name": "Exeggutor",
     "types": ["grass", "psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -627,24 +670,28 @@
     "dex": "#105",
     "name": "Marowak",
     "types": ["ground"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#106",
     "name": "Hitmonlee",
     "types": ["fighting"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#107",
     "name": "Hitmonchan",
     "types": ["fighting"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#108",
     "name": "Lickitung",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -657,6 +704,7 @@
     "dex": "#110",
     "name": "Weezing",
     "types": ["poison"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -669,6 +717,7 @@
     "dex": "#112",
     "name": "Rhydon",
     "types": ["ground", "rock"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -681,12 +730,14 @@
     "dex": "#114",
     "name": "Tangela",
     "types": ["grass"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#115",
     "name": "Kangaskhan",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -711,6 +762,7 @@
     "dex": "#119",
     "name": "Seaking",
     "types": ["water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -723,12 +775,14 @@
     "dex": "#121",
     "name": "Starmie",
     "types": ["water", "psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#122",
     "name": "Mr. Mime",
     "types": ["psychic", "fairy"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -741,30 +795,35 @@
     "dex": "#124",
     "name": "Jynx",
     "types": ["ice", "psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#125",
     "name": "Electabuzz",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#126",
     "name": "Magmar",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#127",
     "name": "Pinsir",
     "types": ["bug"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#128",
     "name": "Tauros",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -777,18 +836,21 @@
     "dex": "#130",
     "name": "Gyarados",
     "types": ["water", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#131",
     "name": "Lapras",
     "types": ["water", "ice"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#132",
     "name": "Ditto",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -801,18 +863,21 @@
     "dex": "#134",
     "name": "Vaporeon",
     "types": ["water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#135",
     "name": "Jolteon",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#136",
     "name": "Flareon",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -831,6 +896,7 @@
     "dex": "#139",
     "name": "Omastar",
     "types": ["rock", "water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -843,36 +909,42 @@
     "dex": "#141",
     "name": "Kabutops",
     "types": ["rock", "water"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#142",
     "name": "Aerodactyl",
     "types": ["rock", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#143",
     "name": "Snorlax",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#144",
     "name": "Articuno",
     "types": ["ice", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#145",
     "name": "Zapdos",
     "types": ["electric", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#146",
     "name": "Moltres",
     "types": ["fire", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -891,18 +963,21 @@
     "dex": "#149",
     "name": "Dragonite",
     "types": ["dragon", "flying"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#150",
     "name": "Mewtwo",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
     "dex": "#151",
     "name": "Mew",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 1,
   },
   {
@@ -921,6 +996,7 @@
     "dex": "#154",
     "name": "Meganium",
     "types": ["grass"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -939,6 +1015,7 @@
     "dex": "#157",
     "name": "Typhlosion",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -957,6 +1034,7 @@
     "dex": "#160",
     "name": "Feraligatr",
     "types": ["water"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -969,6 +1047,7 @@
     "dex": "#162",
     "name": "Furret",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -981,6 +1060,7 @@
     "dex": "#164",
     "name": "Noctowl",
     "types": ["normal", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -993,6 +1073,7 @@
     "dex": "#166",
     "name": "Ledian",
     "types": ["bug", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1005,12 +1086,14 @@
     "dex": "#168",
     "name": "Ariados",
     "types": ["bug", "poison"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#169",
     "name": "Crobat",
     "types": ["poison", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1023,6 +1106,7 @@
     "dex": "#171",
     "name": "Lanturn",
     "types": ["water", "electric"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1053,6 +1137,7 @@
     "dex": "#176",
     "name": "Togetic",
     "types": ["normal", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1065,6 +1150,7 @@
     "dex": "#178",
     "name": "Xatu",
     "types": ["psychic", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1083,12 +1169,14 @@
     "dex": "#181",
     "name": "Ampharos",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#182",
     "name": "Bellossom",
     "types": ["grass"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1101,18 +1189,21 @@
     "dex": "#184",
     "name": "Azumarill",
     "types": ["water"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#185",
     "name": "Sudowoodo",
     "types": ["rock"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#186",
     "name": "Politoed",
     "types": ["water"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1131,12 +1222,14 @@
     "dex": "#189",
     "name": "Jumpluff",
     "types": ["grass", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#190",
     "name": "Aipom",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1149,12 +1242,14 @@
     "dex": "#192",
     "name": "Sunflora",
     "types": ["grass"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#193",
     "name": "Yanma",
     "types": ["bug", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1167,54 +1262,63 @@
     "dex": "#195",
     "name": "Quagsire",
     "types": ["water", "ground"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#196",
     "name": "Espeon",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#197",
     "name": "Umbreon",
     "types": ["dark"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#198",
     "name": "Murkrow",
     "types": ["dark", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#199",
     "name": "Slowking",
     "types": ["water", "psychic"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#200",
     "name": "Misdreavus",
     "types": ["ghost"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#201",
     "name": "Unown",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#202",
     "name": "Wobbuffet",
     "types": ["psychic"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#203",
     "name": "Girafarig",
     "types": ["normal", "psychic"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1227,24 +1331,28 @@
     "dex": "#205",
     "name": "Forretress",
     "types": ["bug", "steel"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#206",
     "name": "Dunsparce",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#207",
     "name": "Gligar",
     "types": ["ground", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#208",
     "name": "Steelix",
     "types": ["steel", "ground"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1257,36 +1365,42 @@
     "dex": "#210",
     "name": "Granbull",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#211",
     "name": "Qwilfish",
     "types": ["water", "poison"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#212",
     "name": "Scizor",
     "types": ["bug", "steel"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#213",
     "name": "Shuckle",
     "types": ["bug", "rock"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#214",
     "name": "Heracross",
     "types": ["bug", "fighting"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#215",
     "name": "Sneasel",
     "types": ["dark", "ice"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1299,6 +1413,7 @@
     "dex": "#217",
     "name": "Ursaring",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1311,6 +1426,7 @@
     "dex": "#219",
     "name": "Magcargo",
     "types": ["fire", "rock"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1323,12 +1439,14 @@
     "dex": "#221",
     "name": "Piloswine",
     "types": ["ice", "ground"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#222",
     "name": "Corsola",
     "types": ["water", "rock"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1341,24 +1459,28 @@
     "dex": "#224",
     "name": "Octillery",
     "types": ["water"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#225",
     "name": "Delibird",
     "types": ["ice", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#226",
     "name": "Mantine",
     "types": ["water", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#227",
     "name": "Skarmory",
     "types": ["steel", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1371,12 +1493,14 @@
     "dex": "#229",
     "name": "Houndoom",
     "types": ["dark", "fire"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#230",
     "name": "Kingdra",
     "types": ["water", "dragon"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1389,24 +1513,28 @@
     "dex": "#232",
     "name": "Donphan",
     "types": ["ground"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#233",
     "name": "Porygon2",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#234",
     "name": "Stantler",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#235",
     "name": "Smeargle",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1419,6 +1547,7 @@
     "dex": "#237",
     "name": "Hitmontop",
     "types": ["fighting"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1443,30 +1572,35 @@
     "dex": "#241",
     "name": "Miltank",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#242",
     "name": "Blissey",
     "types": ["normal"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#243",
     "name": "Raikou",
     "types": ["electric"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#244",
     "name": "Entei",
     "types": ["fire"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#245",
     "name": "Suicune",
     "types": ["water"],
+    "finalStage": true,
     "gen": 2,
   },
   {
@@ -1485,24 +1619,28 @@
     "dex": "#248",
     "name": "Tyranitar",
     "types": ["rock", "ground"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#249",
     "name": "Lugia",
     "types": ["psychic", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#250",
     "name": "Ho-Oh",
     "types": ["fire", "flying"],
+    "finalStage": true,
     "gen": 2,
   },
   {
     "dex": "#251",
     "name": "Celebi",
     "types": ["psychic", "grass"],
+    "finalStage": true,
     "gen": 2,
   },
 ]

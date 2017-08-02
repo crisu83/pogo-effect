@@ -2,6 +2,16 @@
 
 export const EnabledGenerations = [1, 2]
 
+export const DisabledPokemon = [
+  'Mew',
+  'Mewtwo',
+  'Raikou',
+  'Entei',
+  'Suicune',
+  'Celebi',
+  'Ho-Oh',
+]
+
 export const TypeNames = {
   NORMAL: 'normal',
   FIRE: 'fire',

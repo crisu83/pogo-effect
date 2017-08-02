@@ -3,6 +3,7 @@
 import pokemon from '../data/pokemon.json'
 import {
   EnabledGenerations,
+  DisabledPokemon,
   PokemonTypes,
   EffectivenessMultipliers,
   EffectivenessTable,
@@ -12,7 +13,11 @@ import {
 import type {Pokemon, ListOfPokemon} from './pokemon/types'
 
 export const getAllPokemon = (): ListOfPokemon =>
-  pokemon.filter(pokemon => EnabledGenerations.indexOf(pokemon.gen) !== -1)
+  pokemon.filter(
+    pokemon =>
+      EnabledGenerations.indexOf(pokemon.gen) !== -1 &&
+      DisabledPokemon.indexOf(pokemon.name) === -1,
+  )
 
 export const filterWeakAgainstPokemon = (
   pokemon: ListOfPokemon,
@@ -43,7 +48,7 @@ export const filterStrongAgainstPokemon = (
 
   for (let i = 0, defender, bestIndex, score; i < pokemon.length; i++) {
     defender = pokemon[i]
-    score = comparePokemon(attacker, pokemon[i])
+    score = comparePokemon(attacker, defender)
     if (score > 1) {
       bestIndex = BestDefenders.indexOf(defender.name)
       if (bestIndex !== -1) {
