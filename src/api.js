@@ -6,10 +6,12 @@ import {
   PokemonTypes,
   EffectivenessMultipliers,
   EffectivenessTable,
+  BestAttackers,
+  BestDefenders,
 } from './constants'
 import type {Pokemon, ListOfPokemon} from './pokemon/types'
 
-export const getAllPokemon = () =>
+export const getAllPokemon = (): ListOfPokemon =>
   pokemon.filter(pokemon => EnabledGenerations.indexOf(pokemon.gen) !== -1)
 
 export const filterWeakAgainstPokemon = (
@@ -18,10 +20,15 @@ export const filterWeakAgainstPokemon = (
 ): ListOfPokemon => {
   const result = []
 
-  for (let i = 0, score; i < pokemon.length; i++) {
-    score = comparePokemon(pokemon[i], defender)
+  for (let i = 0, attacker, bestIndex, score; i < pokemon.length; i++) {
+    attacker = pokemon[i]
+    score = comparePokemon(attacker, defender)
     if (score > 1) {
-      result.push({...pokemon[i], score})
+      bestIndex = BestAttackers.indexOf(attacker.name)
+      if (bestIndex !== -1) {
+        score = +(BestAttackers.length - 1) - bestIndex
+      }
+      result.push({...attacker, score})
     }
   }
 
@@ -34,10 +41,15 @@ export const filterStrongAgainstPokemon = (
 ): ListOfPokemon => {
   const result = []
 
-  for (let i = 0, score; i < pokemon.length; i++) {
+  for (let i = 0, defender, bestIndex, score; i < pokemon.length; i++) {
+    defender = pokemon[i]
     score = comparePokemon(attacker, pokemon[i])
     if (score > 1) {
-      result.push({...pokemon[i], score})
+      bestIndex = BestDefenders.indexOf(defender.name)
+      if (bestIndex !== -1) {
+        score = +(BestDefenders.length - 1) - bestIndex
+      }
+      result.push({...defender, score})
     }
   }
 

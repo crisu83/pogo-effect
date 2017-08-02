@@ -102,3 +102,63 @@ export const EffectivenessTable = [
   [2, 2, 2, 1, 3, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 3, 1, 1], // steel
   [2, 2, 1, 2, 2, 2, 3, 2, 2, 1, 3, 2, 2, 2, 2, 3, 2, 1], // water
 ]
+
+// source: https://pokemongo.gamepress.gg/attackers-tier-list
+export const BestAttackers = [
+  // S-tier
+  'Tyranitar',
+  'Dragonite',
+  'Golem',
+  'Machamp',
+  'Omastar',
+  // A-tier
+  'Rhydon',
+  'Vaporeon',
+  'Espeon',
+  'Exeggutor',
+  'Alakhazam',
+  // B-tier
+  'Lugia',
+  'Heracross',
+  'Jolteon',
+  'Gengar',
+  'Houndoom',
+  // C-tier
+  'Gyarados',
+  'Flareon',
+  'Scizor',
+  'Pinsir',
+  'Venusaur',
+  'Jynx',
+  'Poliwrath',
+  'Vileplume',
+  'Victreebel',
+]
+
+// source: https://pokemongo.gamepress.gg/gym-defenders-tier-list
+export const BestDefenders = [
+  // S-tier
+  'Blissey',
+  'Snorlax',
+  'Chansey',
+  // A-tier
+  'Lapras',
+  'Steelix',
+  'Muk',
+  // B-tier
+  'Slowbro',
+  'Slowking',
+  'Tentacruel',
+  'Ampharos',
+  'Gyarados',
+  'Dragonite',
+  'Umbreon',
+  'Vaporeon',
+  'Donphan',
+  'Clefable',
+  // C-tier
+  'Kangaskhan',
+  'Miltank',
+  'Hypno',
+  'Rhydon',
+]

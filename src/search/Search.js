@@ -36,7 +36,12 @@ const Search = ({
   >
     <View style={[styles.search, !isSearchActive && styles.searchInactive]}>
       {isSearchActive
-        ? <SearchField onChange={performSearch} onClear={clearSearch} />
+        ? <SearchField
+            isSearchActive={isSearchActive}
+            searchQuery={searchQuery}
+            onChange={performSearch}
+            onClear={clearSearch}
+          />
         : <Image
             style={styles.searchIcon}
             source={require('../../assets/images/icon-search.png')}

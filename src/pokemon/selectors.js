@@ -24,7 +24,7 @@ export const getPokemonBySearchQuery: Selector<
     if (searchQuery.length === 0) {
       return allPokemon
     }
-    const expression = new RegExp(`^.*${searchQuery}`, 'i')
+    const expression = new RegExp(`^${searchQuery}`, 'i')
     return allPokemon.filter(pokemon => pokemon.name.match(expression) !== null)
   },
 )
