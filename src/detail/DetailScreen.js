@@ -3,6 +3,7 @@
 import React, {Component} from 'react'
 import {StyleSheet, ScrollView, Text, View} from 'react-native'
 import {connect} from 'react-redux'
+import {clearSearch} from '../search/actions'
 import {
   getOnePokemon,
   getWeakAgainstPokemon,
@@ -28,6 +29,7 @@ type Props = {
   data: Pokemon,
   weakAgainst: ListOfPokemon,
   strongAgainst: ListOfPokemon,
+  clearSearch: typeof clearSearch,
 }
 
 type State = {
@@ -47,6 +49,15 @@ class DetailScreen extends Component {
 
   onPokemonPress = dex => {
     this.props.navigation.navigate('Detail', {dex})
+  }
+
+  onBackPress = () => {
+    this.props.navigation.goBack()
+  }
+
+  onHomePress = () => {
+    this.props.clearSearch()
+    this.props.navigation.navigate('Home')
   }
 
   render() {
@@ -81,35 +92,23 @@ class DetailScreen extends Component {
               onPress={this.changeTab}
             />
           </View>
-          {activeTabIndex === TabIndex.WEAK_AGAINST
-            ? <TabContent
-                data={weakAgainst}
-                onPokemonPress={this.onPokemonPress}
-              />
-            : null}
-          {activeTabIndex === TabIndex.STRONG_AGAINST
-            ? <TabContent
-                data={strongAgainst}
-                onPokemonPress={this.onPokemonPress}
-              />
-            : null}
-          <BackButton onPress={() => navigation.goBack()} />
-          <HomeButton onPress={() => navigation.navigate('Home')} />
+          {activeTabIndex === TabIndex.WEAK_AGAINST &&
+            <TabContent
+              data={weakAgainst}
+              onPokemonPress={this.onPokemonPress}
+            />}
+          {activeTabIndex === TabIndex.STRONG_AGAINST &&
+            <TabContent
+              data={strongAgainst}
+              onPokemonPress={this.onPokemonPress}
+            />}
+          <BackButton onPress={this.onBackPress} />
+          <HomeButton onPress={this.onHomePress} />
         </ScrollView>
       </View>
     )
   }
 }
-
-const mapStateToProps = (state, props) => ({
-  data: getOnePokemon(state, {dex: props.navigation.state.params.dex}),
-  weakAgainst: getWeakAgainstPokemon(state, {
-    dex: props.navigation.state.params.dex,
-  }),
-  strongAgainst: getStrongAgainstPokemon(state, {
-    dex: props.navigation.state.params.dex,
-  }),
-})
 
 const styles = StyleSheet.create({
   container: {
@@ -150,4 +149,13 @@ const styles = StyleSheet.create({
   },
 })
 
-export default connect(mapStateToProps)(DetailScreen)
+const mapStateToProps = (state, props) => {
+  const {dex} = props.navigation.state.params
+  return {
+    data: getOnePokemon(state, {dex}),
+    weakAgainst: getWeakAgainstPokemon(state, {dex}),
+    strongAgainst: getStrongAgainstPokemon(state, {dex}),
+  }
+}
+
+export default connect(mapStateToProps, {clearSearch})(DetailScreen)

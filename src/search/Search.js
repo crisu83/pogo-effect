@@ -11,23 +11,32 @@ import {
   View,
 } from 'react-native'
 import {connect} from 'react-redux'
-import {activateSearch} from './actions'
-import {getIsSearchActive} from './selectors'
+import {activateSearch, performSearch, clearSearch} from './actions'
+import {getIsSearchActive, getSearchQuery} from './selectors'
 import SearchField from './SearchField'
 
 type Props = {
-  activateSearch: typeof activateSearch,
   isSearchActive: boolean,
+  searchQuery: string,
+  activateSearch: typeof activateSearch,
+  performSearch: typeof performSearch,
+  clearSearch: typeof clearSearch,
 }
 
-const Search = ({activateSearch, isSearchActive}: Props) =>
+const Search = ({
+  isSearchActive,
+  searchQuery,
+  activateSearch,
+  performSearch,
+  clearSearch,
+}: Props) =>
   <TouchableOpacity
     style={styles.component}
     onPress={!isSearchActive ? activateSearch : noop}
   >
     <View style={[styles.search, !isSearchActive && styles.searchInactive]}>
       {isSearchActive
-        ? <SearchField />
+        ? <SearchField onChange={performSearch} onClear={clearSearch} />
         : <Image
             style={styles.searchIcon}
             source={require('../../assets/images/icon-search.png')}
@@ -42,7 +51,6 @@ const styles = StyleSheet.create({
   search: {
     backgroundColor: '#f53b00',
     borderRadius: 20,
-    // flex: 1,
     height: 40,
   },
   searchInactive: {
@@ -61,6 +69,11 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => ({
   isSearchActive: getIsSearchActive(state),
+  searchQuery: getSearchQuery(state),
 })
 
-export default connect(mapStateToProps, {activateSearch})(Search)
+export default connect(mapStateToProps, {
+  activateSearch,
+  performSearch,
+  clearSearch,
+})(Search)

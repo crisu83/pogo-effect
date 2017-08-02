@@ -2,27 +2,25 @@
 
 import React from 'react'
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native'
-import {connect} from 'react-redux'
-import {performSearch, clearSearch} from './actions'
-import {getIsSearchActive, getSearchQuery} from './selectors'
 import {normalizeSize} from '../helpers'
 
 type Props = {
+  isSearchActive: boolean,
   searchQuery: string,
-  performSearch: typeof performSearch,
-  clearSearch: typeof clearSearch,
+  onChange: Function,
+  onClear: Function,
 }
 
-const SearchField = ({searchQuery, performSearch, clearSearch}: Props) =>
+const SearchField = ({isSearchActive, searchQuery, onChange, onClear}: Props) =>
   <View style={styles.isSearchActive}>
     <TextInput
       style={styles.searchInput}
-      onChangeText={performSearch}
+      onChangeText={onChange}
       value={searchQuery}
       autoCorrect={false}
       autoFocus
     />
-    <TouchableOpacity style={styles.searchClear} onPress={clearSearch}>
+    <TouchableOpacity style={styles.searchClear} onPress={onClear}>
       <Text style={styles.searchClearText}>×</Text>
     </TouchableOpacity>
   </View>
@@ -54,11 +52,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const mapStateToProps = state => ({
-  isSearchActive: getIsSearchActive(state),
-  searchQuery: getSearchQuery(state),
-})
-
-export default connect(mapStateToProps, {performSearch, clearSearch})(
-  SearchField,
-)
+export default SearchField

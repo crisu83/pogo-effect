@@ -48,10 +48,6 @@ class HomeScreen extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  data: getPokemonBySearchQuery(state),
-})
-
 const styles = StyleSheet.create({
   component: {
     flex: 1,
@@ -69,6 +65,10 @@ const styles = StyleSheet.create({
     paddingLeft: 50,
     paddingRight: 50,
   },
+})
+
+const mapStateToProps = state => ({
+  data: getPokemonBySearchQuery(state),
 })
 
 export default connect(mapStateToProps, {getAllPokemon})(HomeScreen)
