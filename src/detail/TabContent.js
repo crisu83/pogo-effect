@@ -22,6 +22,7 @@ const TabContent = ({data, onPokemonPress}: Props) =>
 
 const styles = StyleSheet.create({
   component: {
+    flex: 1,
     paddingTop: 15,
   },
   list: {

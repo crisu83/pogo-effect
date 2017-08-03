@@ -1,7 +1,7 @@
 // @flow
 
 import React, {Component} from 'react'
-import {FlatList} from 'react-native'
+import {StyleSheet, FlatList, Text, View} from 'react-native'
 import {TypeColors} from '../constants'
 import {alphaSort, normalizeSize} from '../helpers'
 import PokemonListItem from './PokemonListItem'
@@ -53,9 +53,26 @@ class PokemonList extends Component {
         keyExtractor={item => item.dex}
         renderItem={item =>
           <PokemonListItem data={item} onPress={onItemPress} />}
+        ListEmptyComponent={
+          <View style={styles.empty}>
+            <Text style={styles.emptyText}>None</Text>
+          </View>
+        }
       />
     )
   }
 }
+
+const styles = StyleSheet.create({
+  empty: {
+    alignItems: 'center',
+    paddingTop: 100,
+    paddingBottom: 100,
+  },
+  emptyText: {
+    color: '#9b9b9b',
+    fontSize: normalizeSize(30),
+  },
+})
 
 export default PokemonList

@@ -92,16 +92,18 @@ class DetailScreen extends Component {
               onPress={this.changeTab}
             />
           </View>
-          {activeTabIndex === TabIndex.WEAK_AGAINST &&
-            <TabContent
-              data={weakAgainst}
-              onPokemonPress={this.onPokemonPress}
-            />}
-          {activeTabIndex === TabIndex.STRONG_AGAINST &&
-            <TabContent
-              data={strongAgainst}
-              onPokemonPress={this.onPokemonPress}
-            />}
+          <View style={styles.contents}>
+            {activeTabIndex === TabIndex.WEAK_AGAINST &&
+              <TabContent
+                data={weakAgainst}
+                onPokemonPress={this.onPokemonPress}
+              />}
+            {activeTabIndex === TabIndex.STRONG_AGAINST &&
+              <TabContent
+                data={strongAgainst}
+                onPokemonPress={this.onPokemonPress}
+              />}
+          </View>
           <BackButton onPress={this.onBackPress} />
           <HomeButton onPress={this.onHomePress} />
         </ScrollView>
@@ -146,6 +148,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingLeft: 50,
     paddingRight: 50,
+  },
+  contents: {
+    flex: 1,
   },
 })
 

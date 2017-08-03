@@ -3,10 +3,10 @@
 import React from 'react'
 import {StyleSheet, View} from 'react-native'
 import TypeListItem from './TypeListItem'
-import type {ListOfPokemonTypes} from '../pokemon/types'
+import type {ListOfPokemonTypeNames} from '../pokemon/types'
 
 type Props = {
-  data: ListOfPokemonTypes,
+  data: ListOfPokemonTypeNames,
 }
 
 const TypeList = ({data}: Props) =>

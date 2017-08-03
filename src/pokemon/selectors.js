@@ -25,7 +25,7 @@ export const getPokemonBySearchQuery: Selector<
   void,
   ListOfPokemon,
 > = createSelector(
-  [getAllFinalStagePokemon, getSearchQuery],
+  [getAllPokemon, getSearchQuery],
   (allPokemon, searchQuery) => {
     if (searchQuery.length === 0) {
       return allPokemon
@@ -40,17 +40,11 @@ export const getWeakAgainstPokemon: Selector<
   {dex: string},
   ListOfPokemon,
 > = (state, props) =>
-  filterWeakAgainstPokemon(
-    getAllFinalStagePokemon(state),
-    getOnePokemon(state, props),
-  )
+  filterWeakAgainstPokemon(getAllPokemon(state), getOnePokemon(state, props))
 
 export const getStrongAgainstPokemon: Selector<
   RootState,
   {dex: string},
   ListOfPokemon,
 > = (state, props) =>
-  filterStrongAgainstPokemon(
-    getAllFinalStagePokemon(state),
-    getOnePokemon(state, props),
-  )
+  filterStrongAgainstPokemon(getAllPokemon(state), getOnePokemon(state, props))
